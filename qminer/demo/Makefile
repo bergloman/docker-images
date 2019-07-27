@@ -23,10 +23,15 @@ prepare:
 	mkdir -p $(OUT)
 
 $(OUT)/demo_app: prepare $(OUT)/demo_app.o
-	$(GCC) $(COMPILE_FLAGS) $(INCLUDES) $(OUT)/demo_app.o $(QMINER_ROOT)/build/$(QMINER_BUILD)/qminer.a -o $(OUT)/demo_app $(LINK_FLAGS)
+	$(GCC) $(COMPILE_FLAGS) $(INCLUDES) \
+		$(OUT)/demo_app.o \
+		$(QMINER_ROOT)/build/$(QMINER_BUILD)/glib.a \
+		$(QMINER_ROOT)/build/$(QMINER_BUILD)/qminer.a \
+		-o $(OUT)/demo_app \
+		$(LINK_FLAGS)
 
-$(OUT)/demo_app.o: main.cpp
-	$(GCC) $(COMPILE_FLAGS) $(INCLUDES) -c main.cpp -o $(OUT)/demo_app.o $(LINK_FLAGS)
+$(OUT)/demo_app.o: demo_app.cpp
+	$(GCC) $(COMPILE_FLAGS) $(INCLUDES) -c demo_app.cpp -o $(OUT)/demo_app.o $(LINK_FLAGS)
 
 clean:
 	rm -rf $(OUT)
