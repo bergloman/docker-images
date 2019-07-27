@@ -11,7 +11,7 @@ RUN apt-get update \
     && apt-get install -y nodejs \
     && npm install -g node-gyp \
 # qminer
-    && git clone https://github.com/Qlector/qminer.git $BASEDIR/qminer \
+    && git clone https://github.com/qminer/qminer.git $BASEDIR/qminer \
     && node-gyp configure build -C $BASEDIR/qminer \
 # cleanup
     && apt-get autoremove -y && apt-get clean && rm -rf /var/lib/apt/lists/* /var/tmp/*
