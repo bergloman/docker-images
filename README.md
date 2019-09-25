@@ -14,3 +14,13 @@ Based on `jupyter-tensorflow`, which contains `tensorflow` and `keras`.
 
 Additionally, it contains `mxnet` and `gluon`, so you can do your deep-learning
 experiments with most commonly used technologies.
+
+## problog
+
+https://hub.docker.com/r/bergloman/problog
+
+```bash
+docker pull bergloman/problog:latest
+```
+
+Python-based image with ProbLog (probabilistic Prolog).
