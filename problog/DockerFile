@@ -1,5 +1,6 @@
-FROM  python:3.7-buster
+FROM python:3.7-buster
 
 RUN pip install problog
 RUN apt-get update
 RUN apt-get install nano tmux mc -y
+RUN mkdir /home/dev

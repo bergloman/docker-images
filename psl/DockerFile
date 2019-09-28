@@ -1,0 +1,9 @@
+FROM openjdk:8
+
+RUN apt-get update
+RUN apt-get install nano tmux mc -y
+RUN mkdir /home/dev
+RUN mkdir /home/dev/psl
+RUN curl \
+    -o /home/dev/psl/psl-cli-2.1.0.jar \
+    https://linqs-data.soe.ucsc.edu/maven/repositories/psl-releases/org/linqs/psl-cli/2.1.0/psl-cli-2.1.0.jar
