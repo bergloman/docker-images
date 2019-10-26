@@ -1,4 +1,8 @@
-# How to use PSL image
+# PSL image
+
+**PSL** stands for probabilistic soft-logic and is a machine learning framework for developing probabilistic models. Official site for the project is [http://psl.linqs.org/](http://psl.linqs.org/)
+
+## How to use PSL image
 
 Run docker container and optionally map source into it:
 
